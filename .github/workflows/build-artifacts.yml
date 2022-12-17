@@ -15,16 +15,16 @@ jobs:
       - name: Check out latest front end
         uses: actions/checkout@v2
         with:
-          repository: yueziji/kikoeru-quasar
-          ref: main
+          repository: hanaonnao/kikoeru-quasar
+          ref: history-release
 
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
       
       - run: npm install -g @quasar/cli
-      - run: npm install
+      - run: npm ci
       - run: quasar build && quasar build -m pwa
 
       - name: 'Upload PWA'
@@ -96,10 +96,10 @@ jobs:
       - name: Make empty dirs to suppress pkg warnings
         run: mkdir -p config sqlite covers VoiceWork
 
-      - name: Download front-end artifact (PWA)
+      - name: Download front-end artifact (SPA)
         uses: actions/download-artifact@v2
         with:
-          name: PWA-unstable
+          name: SPA-unstable
           path: dist
 
       - name: Check front-end artifacts
