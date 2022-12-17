@@ -1,8 +1,8 @@
 # Kikoeru 后端优化版
 目前在开发历史记录功能，后续会根据需求考虑开发其他功能
 历史记录TODO:
-* 增加了对新RJ号的支持，感谢南+大佬[**Kirie**](https://south-plus.net/u.php?action-show-uid-832724.html)
-* 现在有Dlsite跳转及右上角显示RJ号不齐全的问题
+* 增加了对新RJ号的支持，感谢南+大佬[**Kirie**](https://south-plus.net/u.php?action-show-uid-832724.html)以及[**Arimakaya**](https://github.com/rubebb)
+* ~~现在有Dlsite跳转及右上角显示RJ号不齐全的问题~~
 * ~~最近播放list CSS优化，减小图片大小，优化track信息显示，鼠标动画效果~~
 * CSS还需要继续优化
 * 回到主页时刷新最近播放列表- (放到activated()里即可)
@@ -89,8 +89,8 @@ PWA的优点：基本页面零延迟，可以像手机APP一样通过浏览器�
 
 
 ### TODO
-- [ ] 修复DLsite网址跳转
-- [ ] 修复右上角显示RJ号不齐全问题
+- [x] 修复DLsite网址跳转
+- [x] 修复右上角显示RJ号不齐全问题
 - [x] 可拖动歌词控件
 - [x] 二级页面返回按钮
 - [x] 手动星标
