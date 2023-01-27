@@ -26,7 +26,7 @@ RUN npm install -g @quasar/cli
 ARG FRONTEND_VERSION="history-release"
 # Workaround docker cache
 # https://stackoverflow.com/questions/36996046/how-to-prevent-dockerfile-caching-git-clone
-ADD https://api.github.com/hanaonnao/kikoeru-quasar/git/refs/heads/history-release /tmp/version.json
+ADD https://api.github.com/repos/hanaonnao/kikoeru-quasar/git/refs/heads/history-release /tmp/version.json
 RUN git clone -b ${FRONTEND_VERSION} https://github.com/hanaonnao/kikoeru-quasar.git .
 RUN npm ci
 RUN quasar build && quasar build -m pwa
